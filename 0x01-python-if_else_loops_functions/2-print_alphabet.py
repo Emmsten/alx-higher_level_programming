@@ -1,2 +1,2 @@
-for char in range(ord('a'), ord('z')+1):
-    print(chr(char), end="")
+for char_code in range(ord('a'), ord('z') + 1):
+    print(chr(char_code), end="")
