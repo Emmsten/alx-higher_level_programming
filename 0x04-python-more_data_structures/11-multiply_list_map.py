@@ -1,6 +1,3 @@
 #!/usr/bin/python3
-def best_score(custom_dictionary):
-    if custom_dictionary:
-        return max(custom_dictionary, key=custom_dictionary.get)
-    else:
-        return None
+def multiply_list_map(custom_list=[], custom_number=0):
+    return list(map(lambda n: n * custom_number, custom_list))
