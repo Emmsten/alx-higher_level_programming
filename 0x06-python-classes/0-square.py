@@ -1,8 +1,11 @@
 #!/usr/bin/python3
+"""
+This module defines the class for calculating square.
+"""
+
 
 class Square:
     """
-    This is an empty class that defines a square.
+    This embodies the concept of a square.
     """
-    pas
-
+    pass
