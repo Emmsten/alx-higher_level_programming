@@ -1,0 +1,1 @@
+In addition to lists, Python has two other common data structures: sets and dictionaries. A set is a collection of unique values, where each value can only appear once. A dictionary is a collection of key-value pairs, where each key is associated with a particular value. So, sets are good for storing unique values, while dictionaries are good for storing key-value pairs.
