@@ -1,4 +1,20 @@
-#!/usr/bin/pyhon3
+#!/usr/bin/python3
+
+"""
+This module contains a class Rectangle
+
+>>> Rectangle = __import__('4-rectangle').Rectangle
+
+>>> my_rectangle = Rectangle(2, 4)
+>>> print(type(my_rectangle))
+<class '4-rectangle.Rectangle'>
+
+>>> dict_result = my_rectangle.__dict__
+>>> print(dict(sorted(dict_result.items())))
+{'_Rectangle__height': 4, '_Rectangle__width': 2}
+
+"""
+
 
 class Rectangle:
     """This is a class Rectangle with instance attributes height and width"""
