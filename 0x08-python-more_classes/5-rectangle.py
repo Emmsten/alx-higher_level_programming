@@ -1,3 +1,5 @@
+#!/usr/bin/pyhon3
+
 class Rectangle:
     """This is a class Rectangle with instance attributes height and width"""
 
@@ -21,6 +23,7 @@ class Rectangle:
         """
         self.width = width
         self.height = height
+
 
     @property
     def width(self):
