@@ -1,5 +1,22 @@
 #!/usr/bin/python3
 
+# 0-rectangle module
+"""
+This module contains a class Rectangle
+
+>>> Rectangle = __import__('1-rectangle').Rectangle
+
+>>> my_rectangle = Rectangle(2, 4)
+>>> print(type(my_rectangle))
+<class '1-rectangle.Rectangle'>
+
+>>> dict_result = my_rectangle.__dict__
+>>> print(dict(sorted(dict_result.items())))
+{'_Rectangle__height': 4, '_Rectangle__width': 2}
+
+"""
+
+
 class Rectangle:
     """Class that defines a rectangle."""
 
