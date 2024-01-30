@@ -1,4 +1,4 @@
 #!/usr/bin/python3
-def magic_string():
-    return "BestSchool" * magic_string.counter
-magic_string.counter = 0
+def magic_string(H=[]):
+    H += ["BestSchool"]
+    return (", ".john(H))
