@@ -1,32 +1,19 @@
 #!/usr/bin/python3
+"""Lists states"""
 
-import sys
 import MySQLdb
+from sys import argv
 
 if __name__ == "__main__":
-    if len(sys.argv) != 5:
-        print("Usage: {} username password database state_name".format(sys.argv[0]))
-        sys.exit(1)
-
-    username, password, database, state_name = sys.argv[1:]
-
-    db = MySQLdb.connect(
-        host="localhost",
-        port=3306,
-        user=username,
-        passwd=password,
-        db=database
-    )
-
-    cursor = db.cursor()
-
-    query = "SELECT * FROM states WHERE name = '{}' ORDER BY id ASC".format(state_name)
-    cursor.execute(query)
-
-    rows = cursor.fetchall()
-
-    for row in rows:
+    conn = MySQLdb.connect(host="localhost", port=3306, user=argv[1],
+                           passwd=argv[2], db=argv[3], charset="utf8")
+    cur = conn.cursor()
+    query = """
+SELECT * FROM states WHERE name LIKE BINARY '{}' ORDER BY states.id ASC"""
+    query = query.format(argv[4])
+    cur.execute(query)
+    query_rows = cur.fetchall()
+    for row in query_rows:
         print(row)
-
-    cursor.close()
-    db.close()
+    cur.close()
+    conn.close()
